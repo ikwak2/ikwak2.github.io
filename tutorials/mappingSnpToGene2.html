@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="author" content="Il-Youp Kwak" />
+
+
+<title>Mapping Snp to Gene</title>
+
+
+
+
+
+<link href="data:text/css;charset=utf-8,body%20%7B%0Abackground%2Dcolor%3A%20%23fff%3B%0Amargin%3A%201em%20auto%3B%0Amax%2Dwidth%3A%20700px%3B%0Aoverflow%3A%20visible%3B%0Apadding%2Dleft%3A%202em%3B%0Apadding%2Dright%3A%202em%3B%0Afont%2Dfamily%3A%20%22Open%20Sans%22%2C%20%22Helvetica%20Neue%22%2C%20Helvetica%2C%20Arial%2C%20sans%2Dserif%3B%0Afont%2Dsize%3A%2014px%3B%0Aline%2Dheight%3A%201%2E35%3B%0A%7D%0A%23header%20%7B%0Atext%2Dalign%3A%20center%3B%0A%7D%0A%23TOC%20%7B%0Aclear%3A%20both%3B%0Amargin%3A%200%200%2010px%2010px%3B%0Apadding%3A%204px%3B%0Awidth%3A%20400px%3B%0Aborder%3A%201px%20solid%20%23CCCCCC%3B%0Aborder%2Dradius%3A%205px%3B%0Abackground%2Dcolor%3A%20%23f6f6f6%3B%0Afont%2Dsize%3A%2013px%3B%0Aline%2Dheight%3A%201%2E3%3B%0A%7D%0A%23TOC%20%2Etoctitle%20%7B%0Afont%2Dweight%3A%20bold%3B%0Afont%2Dsize%3A%2015px%3B%0Amargin%2Dleft%3A%205px%3B%0A%7D%0A%23TOC%20ul%20%7B%0Apadding%2Dleft%3A%2040px%3B%0Amargin%2Dleft%3A%20%2D1%2E5em%3B%0Amargin%2Dtop%3A%205px%3B%0Amargin%2Dbottom%3A%205px%3B%0A%7D%0A%23TOC%20ul%20ul%20%7B%0Amargin%2Dleft%3A%20%2D2em%3B%0A%7D%0A%23TOC%20li%20%7B%0Aline%2Dheight%3A%2016px%3B%0A%7D%0Atable%20%7B%0Amargin%3A%201em%20auto%3B%0Aborder%2Dwidth%3A%201px%3B%0Aborder%2Dcolor%3A%20%23DDDDDD%3B%0Aborder%2Dstyle%3A%20outset%3B%0Aborder%2Dcollapse%3A%20collapse%3B%0A%7D%0Atable%20th%20%7B%0Aborder%2Dwidth%3A%202px%3B%0Apadding%3A%205px%3B%0Aborder%2Dstyle%3A%20inset%3B%0A%7D%0Atable%20td%20%7B%0Aborder%2Dwidth%3A%201px%3B%0Aborder%2Dstyle%3A%20inset%3B%0Aline%2Dheight%3A%2018px%3B%0Apadding%3A%205px%205px%3B%0A%7D%0Atable%2C%20table%20th%2C%20table%20td%20%7B%0Aborder%2Dleft%2Dstyle%3A%20none%3B%0Aborder%2Dright%2Dstyle%3A%20none%3B%0A%7D%0Atable%20thead%2C%20table%20tr%2Eeven%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0A%7D%0Ap%20%7B%0Amargin%3A%200%2E5em%200%3B%0A%7D%0Ablockquote%20%7B%0Abackground%2Dcolor%3A%20%23f6f6f6%3B%0Apadding%3A%200%2E25em%200%2E75em%3B%0A%7D%0Ahr%20%7B%0Aborder%2Dstyle%3A%20solid%3B%0Aborder%3A%20none%3B%0Aborder%2Dtop%3A%201px%20solid%20%23777%3B%0Amargin%3A%2028px%200%3B%0A%7D%0Adl%20%7B%0Amargin%2Dleft%3A%200%3B%0A%7D%0Adl%20dd%20%7B%0Amargin%2Dbottom%3A%2013px%3B%0Amargin%2Dleft%3A%2013px%3B%0A%7D%0Adl%20dt%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Aul%20%7B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Aul%20li%20%7B%0Alist%2Dstyle%3A%20circle%20outside%3B%0A%7D%0Aul%20ul%20%7B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Apre%2C%20code%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0Aborder%2Dradius%3A%203px%3B%0Acolor%3A%20%23333%3B%0Awhite%2Dspace%3A%20pre%2Dwrap%3B%20%0A%7D%0Apre%20%7B%0Aborder%2Dradius%3A%203px%3B%0Amargin%3A%205px%200px%2010px%200px%3B%0Apadding%3A%2010px%3B%0A%7D%0Apre%3Anot%28%5Bclass%5D%29%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0A%7D%0Acode%20%7B%0Afont%2Dfamily%3A%20Consolas%2C%20Monaco%2C%20%27Courier%20New%27%2C%20monospace%3B%0Afont%2Dsize%3A%2085%25%3B%0A%7D%0Ap%20%3E%20code%2C%20li%20%3E%20code%20%7B%0Apadding%3A%202px%200px%3B%0A%7D%0Adiv%2Efigure%20%7B%0Atext%2Dalign%3A%20center%3B%0A%7D%0Aimg%20%7B%0Abackground%2Dcolor%3A%20%23FFFFFF%3B%0Apadding%3A%202px%3B%0Aborder%3A%201px%20solid%20%23DDDDDD%3B%0Aborder%2Dradius%3A%203px%3B%0Aborder%3A%201px%20solid%20%23CCCCCC%3B%0Amargin%3A%200%205px%3B%0A%7D%0Ah1%20%7B%0Amargin%2Dtop%3A%200%3B%0Afont%2Dsize%3A%2035px%3B%0Aline%2Dheight%3A%2040px%3B%0A%7D%0Ah2%20%7B%0Aborder%2Dbottom%3A%204px%20solid%20%23f7f7f7%3B%0Apadding%2Dtop%3A%2010px%3B%0Apadding%2Dbottom%3A%202px%3B%0Afont%2Dsize%3A%20145%25%3B%0A%7D%0Ah3%20%7B%0Aborder%2Dbottom%3A%202px%20solid%20%23f7f7f7%3B%0Apadding%2Dtop%3A%2010px%3B%0Afont%2Dsize%3A%20120%25%3B%0A%7D%0Ah4%20%7B%0Aborder%2Dbottom%3A%201px%20solid%20%23f7f7f7%3B%0Amargin%2Dleft%3A%208px%3B%0Afont%2Dsize%3A%20105%25%3B%0A%7D%0Ah5%2C%20h6%20%7B%0Aborder%2Dbottom%3A%201px%20solid%20%23ccc%3B%0Afont%2Dsize%3A%20105%25%3B%0A%7D%0Aa%20%7B%0Acolor%3A%20%230033dd%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Aa%3Ahover%20%7B%0Acolor%3A%20%236666ff%3B%20%7D%0Aa%3Avisited%20%7B%0Acolor%3A%20%23800080%3B%20%7D%0Aa%3Avisited%3Ahover%20%7B%0Acolor%3A%20%23BB00BB%3B%20%7D%0Aa%5Bhref%5E%3D%22http%3A%22%5D%20%7B%0Atext%2Ddecoration%3A%20underline%3B%20%7D%0Aa%5Bhref%5E%3D%22https%3A%22%5D%20%7B%0Atext%2Ddecoration%3A%20underline%3B%20%7D%0A%0Acode%20%3E%20span%2Ekw%20%7B%20color%3A%20%23555%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%0Acode%20%3E%20span%2Edt%20%7B%20color%3A%20%23902000%3B%20%7D%20%0Acode%20%3E%20span%2Edv%20%7B%20color%3A%20%2340a070%3B%20%7D%20%0Acode%20%3E%20span%2Ebn%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Efl%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Ech%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Est%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Eco%20%7B%20color%3A%20%23888888%3B%20font%2Dstyle%3A%20italic%3B%20%7D%20%0Acode%20%3E%20span%2Eot%20%7B%20color%3A%20%23007020%3B%20%7D%20%0Acode%20%3E%20span%2Eal%20%7B%20color%3A%20%23ff0000%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%0Acode%20%3E%20span%2Efu%20%7B%20color%3A%20%23900%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%20code%20%3E%20span%2Eer%20%7B%20color%3A%20%23a61717%3B%20background%2Dcolor%3A%20%23e3d2d2%3B%20%7D%20%0A" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+
+
+<div class="fluid-row" id="header">
+
+
+<h1 class="title">Mapping Snp to Gene</h1>
+<h4 class="author"><em>Il-Youp Kwak</em></h4>
+<h4 class="date"><em>2016-5-2</em></h4>
+
+</div>
+
+
+<p>For a simple example, I prepared 34 rs-ids in <a href="data/myrsids.txt" class="uri">myrsids.txt</a>.</p>
+<pre><code>bash-3.2$ head myrsids.txt
+rs3121561
+rs2799064
+rs3128126
+rs3766186
+rs11721
+rs2887286
+rs3813200
+rs7515488
+rs3813199
+rs6603781
+</code></pre>
+<p>We can use <a href="http://grass.cgs.hku.hk/limx/snptracker/">SnpTracker</a> software (hg19 used) to get the genomic coordinates of SNPs.</p>
+<pre><code>bash-3.2$ java -Xmx4g -jar ./snptracker.jar --in myrsids.txt --rsid 1 --ref hg19 --out myrsids.out
+@----------------------------------------------------------@
+|     snpTracker!     |     v1.0      |   11/Dec/2014    |
+|----------------------------------------------------------|
+|  (C) 2013 Jiaen Deng,  dengje@yahoo.com                  |
+|  (C) 2013 Miaoxin Li,  limx54@yahoo.com                  |
+|----------------------------------------------------------|
+|  For documentation, citation &amp; bug-report instructions:  |
+|      http://statgenpro.psychiatry.hku.hk/snpTracker      |
+@----------------------------------------------------------@
+Effective settings :
+--in myrsids.txt
+--out myrsids.out
+--rsid 1
+--ref hg19
+--merge-file b142_GRCh19.RsMergeArch.bcp.gz(Default)
+--coor-file b142_SNPChrPosOnRef_GRCh19p105.bcp.gz(Default)
+--hist-file b142_GRCh19.SNPHistory.bcp.gz(Default)
+
+To disable web checking, use --no-web
+No file(s) need to been updated!
+34 SNPs are read from myrsids.txt
+Reading SNP history....
+Reading merging history of SNPs....
+Reading genomic coordinates of SNPs....
+Trackering SNPs coordinates....
+34 SNPs successfully tracked and mapped are saved in myrsids.out.result.txt
+0 SNPs were failed to map in dbSNP, which are saved in myrsids.out.error.txt
+
+The time used is 765 seconds.
+</code></pre>
+<p>Part of output looks like this <a href="data/myrsids.out.result.txt">myrsids.out.result.txt</a></p>
+<pre><code>bash-3.2$ head myrsids.out.result.txt
+1   rs3121561   990380  rs3121561
+1   rs2799064   957898  rs2799064
+1   rs3128126   962210  rs3128126
+1   rs3766186   1162435 rs3766186
+1   rs11721 1152631 rs11721
+1   rs2887286   1156131 rs2887286
+1   rs3813200   1151300 rs3813200
+1   rs7515488   1163804 rs7515488
+1   rs3813199   1158277 rs3813199
+1   rs6603781   1158631 rs6603781
+</code></pre>
+<p>We can reorder selected columns using awk command below. <a href="data/myrsids2.txt">myrsids2.txt</a></p>
+<pre><code>bash-3.2$ awk '{printf(&quot;%s\t%s\t%s\n&quot;, $2, $1, $3); }' myrsids.out.result.txt &gt; myrsids2.txt
+bash-3.2$ head myrsids2.txt
+rs3121561   1   990380
+rs2799064   1   957898
+rs3128126   1   962210
+rs3766186   1   1162435
+rs11721 1   1152631
+rs2887286   1   1156131
+rs3813200   1   1151300
+rs7515488   1   1163804
+rs3813199   1   1158277
+rs6603781   1   1158631
+</code></pre>
+<p>Now we are ready to map our SNPs to Genes using <a href="http://ctg.cncr.nl/software/magma">MAGMA</a> software. For a simple example, we considered the gene database below which is subset of full data, NCBI37.gene.loc, downloadable from MAGMA website</p>
+<p>Part of data looks like below. <a href="data/exNCBI37.gene.loc">exNCBI37.gene.loc</a></p>
+<pre><code>bash-3.2$ head exNCBI37.gene.loc
+375790  1       955503  991492  +       AGRN
+254173  1       1109286 1133313 +       TTLL10
+51150   1       1152288 1167447 -       SDF4
+388581  1       1177833 1182102 -       FAM132A
+116983  1       1227764 1243269 -       ACAP3
+126789  1       1243994 1247057 +       PUSL1
+54973   1       1246965 1260046 -       CPSF3L
+80772   1       1260143 1264276 +       CPTP
+83756   1       1266726 1269844 +       TAS1R3
+1855    1       1270658 1284492 -       DVL1
+</code></pre>
+<p>We want to map our SNPs to gene symbol and we want to use 2kb upstream and 2kb downstream. We can do this using awk command below. <a href="data/exNCBI37.2kb.sym">exNCBI37.2kb.sym</a></p>
+<pre><code>bash-3.2$ awk '{printf(&quot;%s\t%s\t%d\t%d\t%s\t%s\n&quot;, $1, $2, $3-2000, $4+2000, $5, $6); }' NCBI37.3.gene.loc &gt; NCBI37.2kb.sym
+bash-3.2$ cat exNCBI37.2kb.sym
+AGRN    1       953503  993492  +       375790
+TTLL10  1       1107286 1135313 +       254173
+SDF4    1       1150288 1169447 -       51150
+FAM132A 1       1175833 1184102 -       388581
+ACAP3   1       1225764 1245269 -       116983
+PUSL1   1       1241994 1249057 +       126789
+CPSF3L  1       1244965 1262046 -       54973
+CPTP    1       1258143 1266276 +       80772
+TAS1R3  1       1264726 1271844 +       83756
+DVL1    1       1268658 1286492 -       1855
+MXRA8   1       1286071 1295915 -       54587
+AURKAIP1        1       1307110 1312818 -       54998
+CCNL2   1       1319091 1336718 -       81669
+MRPL20  1       1335276 1344693 -       55052
+ANKRD65 1       1351800 1358650 -       441869
+ATAD3C  1       1383069 1407538 +       219293
+ATAD3B  1       1405164 1433582 +       83858
+ATAD3A  1       1445523 1472067 +       55210
+TMEM240 1       1468158 1477740 -       339453
+SSU72   1       1475053 1512262 -       29101</code></pre>
+<p>Run magma software as below. Two inputs are SNP location, <a href="data/myrsids2.txt">myrsids2.txt</a> and gene database, <a href="data/exNCBI37.2kb.sym">exNCBI37.2kb.sym</a>.</p>
+<pre><code>bash-3.2$ /usr/local/bin/magma --annotate --snp-loc myrsids2.txt --gene-loc exNCBI37.2kb.sym --out myrsidout
+Welcome to MAGMA v1.02
+Using flags:
+        --annotate
+        --snp-loc myrsids2.txt
+        --gene-loc exNCBI37.2kb.sym
+        --out myrsidout
+
+Start time is 10:29:08, Monday 02 May 2016
+
+Starting annotation...
+Reading gene locations from file exNCBI37.2kb.sym...
+        20 gene locations read from file
+        chromosome  1: 20 genes
+Reading SNP locations from file myrsids2.txt...
+        34 SNP locations read from file
+        of those, 34 (100%) mapped to at least one gene
+Writing annotation to file myrsidout.genes.annot
+        for chromosome  1, 16 genes are empty (out of 20)
+        at least one SNP mapped to each of a total of 4 genes (out of 20)
+
+
+End time is 10:29:08, Monday 02 May 2016 (elapsed: 00:00:00)</code></pre>
+<p>Here’s the result. 3 SNPs are mapped on AGRN, 8 SNPs are mapped on SDF4, 1 SNP is mapped on TMEM240 and 23 SNPs are mapped on SSU72.</p>
+<pre><code>bash-3.2$ cat myrsidout.genes.annot
+# window_up = 0
+# window_down = 0
+AGRN    1:953503:993492 rs3121561       rs2799064       rs3128126
+SDF4    1:1150288:1169447       rs3766186       rs11721 rs2887286       rs3813200       rs7515488       rs3813199       rs6603781       rs11260562
+TMEM240 1:1468158:1477740       rs11807706
+SSU72   1:1475053:1512262       rs4970458       rs2031709       rs3128342       rs3766169       rs2296715       rs2296716       rs3118509       rs3766177       rs3766178       rs3766180       rs6603793       rs6656541       rs7366884       rs7519837       rs7520996       rs7531530       rs11260611      rs1887284       rs6603791       rs7517401       rs7540231       rs9439468       rs11807706</code></pre>
+
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

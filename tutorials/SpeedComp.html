@@ -225,7 +225,7 @@ t2 &lt;- proc.time()</code></pre>
 <pre class="r"><code>t2 - t1</code></pre>
 <pre><code>##   user  system elapsed
 ## 33.550   0.350  33.935</code></pre>
-<p>The speed using <code>perl</code> was even slower then <code>old R</code>. Maybe my code is not efficient.</p>
+<p>The speed using <code>perl</code> was even slower then <code>old R</code> </p>
 <p>Next, I used R microbenchmark package for more exact speed comparison. <code>f1()</code> is using old R, <code>f2()</code> is using <code>dplyr</code> and <code>readr</code>, <code>f3()</code> is using <code>data.table</code>, <code>f4()</code> is using <code>awk</code> and <code>f5()</code> is using <code>perl</code>. The same procedure evaluated 273 times and summary table is provided below. We can check that <code>awk</code> is very fast compared to other methods.</p>
 <pre class="r"><code>&gt; summary(Res)
   expr       min        lq      mean    median        uq       max neval

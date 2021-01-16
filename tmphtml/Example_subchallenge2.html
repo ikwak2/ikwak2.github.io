@@ -13197,7 +13197,7 @@ The following object is masked from ‘package:stats’:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>states <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;0&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="kc">LETTERS</span><span class="p">)</span>
@@ -13242,7 +13242,7 @@ nw_file <span class="o">&lt;-</span> <span class="kp">sprintf</span><span class=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>x <span class="o">&lt;-</span> read.table<span class="p">(</span>txt_file<span class="p">,</span> header <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span> sep <span class="o">=</span> <span class="s">&#39;\t&#39;</span><span class="p">)</span>
@@ -13294,7 +13294,7 @@ tip_names <span class="o">&lt;-</span> x<span class="p">[,</span> <span class="m
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>states2num <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="kp">length</span><span class="p">(</span>states<span class="p">)</span>
@@ -13322,7 +13322,7 @@ y <span class="o">&lt;-</span> read.tree<span class="p">(</span>nw_file<span cla
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>x
@@ -13364,7 +13364,7 @@ The states are 0 - A B C D E F G H I J K L M N O P Q R S T U V W X Y Z </pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>plot<span class="p">(</span>y<span class="p">)</span>
@@ -13936,7 +13936,7 @@ height=420
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>D_h <span class="o">=</span> x <span class="o">%&gt;%</span> dist.hamming<span class="p">()</span>
@@ -13957,7 +13957,7 @@ height=420
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">length</span><span class="p">(</span>D_h<span class="p">)</span>
@@ -14005,7 +14005,7 @@ height=420
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">set.seed</span><span class="p">(</span><span class="m">99</span><span class="p">)</span>
@@ -14029,7 +14029,7 @@ test_idx <span class="o">=</span> idx1<span class="p">[</span><span class="m">71
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>SDs_train <span class="o">=</span> <span class="kc">NULL</span>
@@ -14075,7 +14075,7 @@ test_idx <span class="o">=</span> idx1<span class="p">[</span><span class="m">71
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>SDs_test <span class="o">=</span> <span class="kc">NULL</span>
@@ -14121,10 +14121,10 @@ test_idx <span class="o">=</span> idx1<span class="p">[</span><span class="m">71
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span>eval_test <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>InfoW<span class="p">,</span> SDs_test<span class="p">,</span> dir <span class="o">=</span> <span class="s">&#39;res&#39;</span><span class="p">,</span> fnm<span class="o">=</span> <span class="s">&quot;v1&quot;</span><span class="p">,</span> fun <span class="o">=</span> calcdist1<span class="p">)</span> <span class="p">{</span>
+<div class=" highlight hl-r"><pre><span></span>eval_test <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>InfoW<span class="p">,</span> SDs_test<span class="p">,</span> dir <span class="o">=</span> <span class="s">&#39;res&#39;</span><span class="p">,</span> fnm<span class="o">=</span> <span class="s">&quot;v1&quot;</span><span class="p">)</span> <span class="p">{</span>
     Dwh <span class="o">=</span> <span class="kc">NULL</span>
     Dh <span class="o">=</span> <span class="kc">NULL</span>
     
@@ -14133,7 +14133,7 @@ test_idx <span class="o">=</span> idx1<span class="p">[</span><span class="m">71
     <span class="kr">for</span> <span class="p">(</span>i <span class="kr">in</span> <span class="m">1</span><span class="o">:</span><span class="kp">length</span><span class="p">(</span>SDs_test<span class="p">))</span> <span class="p">{</span>
         x <span class="o">=</span> SDs_test<span class="p">[[</span>i<span class="p">]][</span><span class="m">1</span><span class="p">]</span><span class="o">$</span><span class="kp">seq</span>
         y <span class="o">=</span> SDs_test<span class="p">[[</span>i<span class="p">]]</span><span class="o">$</span>tree
-        tree1 <span class="o">=</span> x <span class="o">%&gt;%</span> fun<span class="p">(</span>InfoW<span class="p">)</span> <span class="o">%&gt;%</span> fastme.bal<span class="p">()</span>
+        tree1 <span class="o">=</span> x <span class="o">%&gt;%</span> dist_weighted_hamming<span class="p">(</span>InfoW<span class="p">,</span> dropout<span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span> <span class="o">%&gt;%</span> fastme.bal<span class="p">()</span>
         dist_wh <span class="o">=</span> tree1 <span class="o">%&gt;%</span> RF.dist<span class="p">(</span>y<span class="p">,</span> normalize <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
         write.tree<span class="p">(</span>tree1<span class="p">,</span> <span class="kp">paste</span><span class="p">(</span><span class="kp">dir</span><span class="p">,</span> <span class="s">&#39;/Constructed_&#39;</span><span class="p">,</span> i<span class="p">,</span><span class="s">&#39;_&#39;</span><span class="p">,</span>fnm<span class="p">,</span><span class="s">&#39;.newick&#39;</span><span class="p">,</span> sep<span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span> <span class="p">)</span>
         write.tree<span class="p">(</span>y<span class="p">,</span> <span class="kp">paste</span><span class="p">(</span><span class="kp">dir</span><span class="p">,</span> <span class="s">&#39;/true_&#39;</span><span class="p">,</span> i<span class="p">,</span><span class="s">&#39;_&#39;</span><span class="p">,</span>fnm<span class="p">,</span><span class="s">&#39;.newick&#39;</span><span class="p">,</span> sep<span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span> <span class="p">)</span>
@@ -14159,13 +14159,13 @@ test_idx <span class="o">=</span> idx1<span class="p">[</span><span class="m">71
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>InfoW <span class="o">=</span> <span class="kp">rep</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">23</span><span class="p">)</span>
 <span class="c1">#InfoW[1] = 1</span>
 <span class="c1">#InfoW[2:23] = 1</span>
-eval_test<span class="p">(</span>InfoW<span class="p">,</span> SDs_test<span class="p">,</span> fnm <span class="o">=</span> <span class="s">&#39;hamming&#39;</span><span class="p">,</span> fun <span class="o">=</span> calcdist1<span class="p">)</span>
+eval_test<span class="p">(</span>InfoW<span class="p">,</span> SDs_test<span class="p">,</span> fnm <span class="o">=</span> <span class="s">&#39;hamming&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14183,7 +14183,7 @@ eval_test<span class="p">(</span>InfoW<span class="p">,</span> SDs_test<span cla
 
 
 <div class="output_html rendered_html output_subarea ">
-0.729896907216495
+0.742268041237113
 </div>
 
 </div>
@@ -14209,7 +14209,7 @@ eval_test<span class="p">(</span>InfoW<span class="p">,</span> SDs_test<span cla
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>getInfoW <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>SDs_train<span class="p">,</span> outcome_pos<span class="o">=</span><span class="m">3</span><span class="o">:</span><span class="m">25</span><span class="p">,</span> upper_bound <span class="o">=</span> <span class="m">7</span><span class="p">,</span> W0 <span class="o">=</span> <span class="m">1</span><span class="p">,</span> W_ <span class="o">=</span> <span class="m">1</span> <span class="p">)</span> <span class="p">{</span>
@@ -14246,11 +14246,11 @@ eval_test<span class="p">(</span>InfoW<span class="p">,</span> SDs_test<span cla
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>InfoW <span class="o">=</span> getInfoW<span class="p">(</span>SDs_train<span class="p">,</span> outcome_pos <span class="o">=</span> <span class="m">3</span><span class="o">:</span><span class="m">25</span><span class="p">,</span> upper_bound <span class="o">=</span> <span class="m">7</span><span class="p">,</span> W0 <span class="o">=</span> <span class="m">1</span><span class="p">,</span> W_ <span class="o">=</span> <span class="m">1</span><span class="p">)</span>
-eval_test<span class="p">(</span>InfoW<span class="p">,</span> SDs_test<span class="p">,</span> fnm <span class="o">=</span> <span class="s">&#39;v1_2&#39;</span><span class="p">)</span>
+eval_test<span class="p">(</span>InfoW<span class="p">,</span> SDs_test<span class="p">,</span> fnm <span class="o">=</span> <span class="s">&#39;v1_1&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14268,7 +14268,7 @@ eval_test<span class="p">(</span>InfoW<span class="p">,</span> SDs_test<span cla
 
 
 <div class="output_html rendered_html output_subarea ">
-0.702749140893471
+0.672508591065292
 </div>
 
 </div>
@@ -14294,7 +14294,7 @@ eval_test<span class="p">(</span>InfoW<span class="p">,</span> SDs_test<span cla
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>WHfit <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span> Wdropout<span class="p">,</span> Wothers <span class="p">)</span> <span class="p">{</span>
@@ -14306,7 +14306,7 @@ eval_test<span class="p">(</span>InfoW<span class="p">,</span> SDs_test<span cla
 
     ds <span class="o">=</span> <span class="kc">NULL</span>
     <span class="kr">for</span><span class="p">(</span>i <span class="kr">in</span> <span class="m">1</span><span class="o">:</span><span class="kp">length</span><span class="p">(</span>SDs_train<span class="p">)){</span>
-        D_wh <span class="o">=</span> calcdist1<span class="p">(</span>SDs_train<span class="p">[[</span>i<span class="p">]][</span><span class="m">1</span><span class="p">]</span><span class="o">$</span><span class="kp">seq</span><span class="p">,</span> InfoW<span class="p">)</span>
+        D_wh <span class="o">=</span> dist_weighted_hamming<span class="p">(</span>SDs_train<span class="p">[[</span>i<span class="p">]][</span><span class="m">1</span><span class="p">]</span><span class="o">$</span><span class="kp">seq</span><span class="p">,</span> InfoW<span class="p">,</span> dropout <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
         tree_wh <span class="o">=</span> fastme.bal<span class="p">(</span>D_wh<span class="p">)</span>
         ds <span class="o">=</span> <span class="kt">c</span><span class="p">(</span>ds<span class="p">,</span> <span class="o">-</span>RF.dist<span class="p">(</span>tree_wh<span class="p">,</span> SDs_train<span class="p">[[</span>i<span class="p">]]</span><span class="o">$</span>tree<span class="p">,</span> normalize <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span> <span class="p">)</span>
     <span class="p">}</span>    
@@ -14369,7 +14369,7 @@ search_grid <span class="o">&lt;-</span> <span class="kt">data.frame</span><span
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="kp">set.seed</span><span class="p">(</span><span class="m">123</span><span class="p">)</span>
@@ -14392,69 +14392,69 @@ bayes_WH <span class="o">&lt;-</span> BayesianOptimization<span class="p">(</spa
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>elapsed = 2.89	Round = 1	Wdropout = 0.5026	Wothers = 14.5008	Value = -0.8063 
-elapsed = 2.79	Round = 2	Wdropout = 1.2036	Wothers = 13.6810	Value = -0.8047 
-elapsed = 2.78	Round = 3	Wdropout = 0.6726	Wothers = 10.8245	Value = -0.7968 
-elapsed = 2.79	Round = 4	Wdropout = 1.3362	Wothers = 12.2388	Value = -0.8010 
-elapsed = 2.37	Round = 5	Wdropout = 1.4167	Wothers = 1.8323	Value = -0.6797 
-elapsed = 2.64	Round = 6	Wdropout = 0.1638	Wothers = 7.9502	Value = -0.7789 
-elapsed = 2.77	Round = 7	Wdropout = 0.8393	Wothers = 11.7392	Value = -0.7969 
-elapsed = 2.62	Round = 8	Wdropout = 1.3494	Wothers = 4.4215	Value = -0.7370 
-elapsed = 2.72	Round = 9	Wdropout = 0.8720	Wothers = 5.7954	Value = -0.7570 
-elapsed = 2.63	Round = 10	Wdropout = 0.7393	Wothers = 4.6269	Value = -0.7377 
-elapsed = 2.49	Round = 11	Wdropout = 1.4396	Wothers = 3.4278	Value = -0.7108 
-elapsed = 2.66	Round = 12	Wdropout = 0.7347	Wothers = 7.0964	Value = -0.7697 
-elapsed = 2.64	Round = 13	Wdropout = 1.0486	Wothers = 7.0853	Value = -0.7694 
-elapsed = 2.68	Round = 14	Wdropout = 0.9017	Wothers = 6.4794	Value = -0.7672 
-elapsed = 2.63	Round = 15	Wdropout = 0.2441	Wothers = 3.5580	Value = -0.7174 
-elapsed = 2.54	Round = 16	Wdropout = 1.3598	Wothers = 3.3739	Value = -0.7072 
-elapsed = 2.63	Round = 17	Wdropout = 0.4445	Wothers = 4.6460	Value = -0.7392 
-elapsed = 2.65	Round = 18	Wdropout = 0.1589	Wothers = 7.7905	Value = -0.7782 
-elapsed = 2.66	Round = 19	Wdropout = 0.5591	Wothers = 5.0906	Value = -0.7496 
-elapsed = 2.88	Round = 20	Wdropout = 1.4363	Wothers = 13.0807	Value = -0.8035 
-elapsed = 2.45	Round = 21	Wdropout = 1.3454	Wothers = 2.1187	Value = -0.6817 
-elapsed = 2.72	Round = 22	Wdropout = 1.0699	Wothers = 7.4697	Value = -0.7729 
-elapsed = 2.98	Round = 23	Wdropout = 0.9967	Wothers = 12.2855	Value = -0.8015 
-elapsed = 2.52	Round = 24	Wdropout = 1.4920	Wothers = 3.1456	Value = -0.7040 
-elapsed = 2.71	Round = 25	Wdropout = 1.0180	Wothers = 9.0728	Value = -0.7887 
-elapsed = 2.54	Round = 26	Wdropout = 1.0919	Wothers = 4.2882	Value = -0.7337 
-elapsed = 2.60	Round = 27	Wdropout = 0.8617	Wothers = 3.2217	Value = -0.7081 
-elapsed = 2.78	Round = 28	Wdropout = 0.9318	Wothers = 11.6697	Value = -0.7981 
-elapsed = 2.82	Round = 29	Wdropout = 0.5048	Wothers = 13.5831	Value = -0.8043 
-elapsed = 2.71	Round = 30	Wdropout = 0.3060	Wothers = 6.5552	Value = -0.7663 
-elapsed = 2.61	Round = 31	Wdropout = 0.1797	Wothers = 1.0000	Value = -0.7287 
-elapsed = 2.43	Round = 32	Wdropout = 0.4963	Wothers = 2.0688	Value = -0.6831 
-elapsed = 2.32	Round = 33	Wdropout = 1.0000	Wothers = 2.1106	Value = -0.6801 
-elapsed = 2.40	Round = 34	Wdropout = 0.9785	Wothers = 1.9764	Value = -0.6797 
-elapsed = 2.47	Round = 35	Wdropout = 1.0000	Wothers = 1.9366	Value = -0.6785 
-elapsed = 2.44	Round = 36	Wdropout = 0.9952	Wothers = 1.9838	Value = -0.6797 
-elapsed = 2.35	Round = 37	Wdropout = 1.0000	Wothers = 1.9046	Value = -0.6794 
-elapsed = 2.39	Round = 38	Wdropout = 0.9656	Wothers = 1.9637	Value = -0.6788 
-elapsed = 2.39	Round = 39	Wdropout = 0.9818	Wothers = 2.0129	Value = -0.6810 
-elapsed = 2.47	Round = 40	Wdropout = 0.9965	Wothers = 2.0362	Value = -0.6804 
-elapsed = 2.34	Round = 41	Wdropout = 0.9560	Wothers = 2.0033	Value = -0.6810 
-elapsed = 2.39	Round = 42	Wdropout = 1.0000	Wothers = 1.9960	Value = -0.6806 
-elapsed = 2.38	Round = 43	Wdropout = 0.9142	Wothers = 1.9837	Value = -0.6803 
-elapsed = 2.36	Round = 44	Wdropout = 1.0000	Wothers = 2.0243	Value = -0.6806 
-elapsed = 2.39	Round = 45	Wdropout = 1.0000	Wothers = 2.0327	Value = -0.6816 
-elapsed = 2.37	Round = 46	Wdropout = 0.9862	Wothers = 2.0247	Value = -0.6803 
-elapsed = 2.41	Round = 47	Wdropout = 1.0000	Wothers = 1.9861	Value = -0.6814 
-elapsed = 2.38	Round = 48	Wdropout = 1.0000	Wothers = 2.0669	Value = -0.6825 
-elapsed = 2.39	Round = 49	Wdropout = 1.0000	Wothers = 2.0114	Value = -0.6822 
-elapsed = 2.42	Round = 50	Wdropout = 1.0000	Wothers = 2.0419	Value = -0.6854 
-elapsed = 2.35	Round = 51	Wdropout = 0.9448	Wothers = 2.1053	Value = -0.6806 
-elapsed = 2.41	Round = 52	Wdropout = 0.8827	Wothers = 2.0355	Value = -0.6801 
-elapsed = 2.42	Round = 53	Wdropout = 0.9536	Wothers = 1.9901	Value = -0.6809 
-elapsed = 2.41	Round = 54	Wdropout = 0.7885	Wothers = 2.0903	Value = -0.6828 
-elapsed = 2.42	Round = 55	Wdropout = 0.9822	Wothers = 1.9525	Value = -0.6791 
-elapsed = 2.40	Round = 56	Wdropout = 0.9760	Wothers = 2.0133	Value = -0.6809 
-elapsed = 2.43	Round = 57	Wdropout = 0.9832	Wothers = 1.9502	Value = -0.6792 
-elapsed = 2.45	Round = 58	Wdropout = 1.0000	Wothers = 1.9389	Value = -0.6784 
-elapsed = 2.44	Round = 59	Wdropout = 0.9502	Wothers = 1.9587	Value = -0.6778 
-elapsed = 2.45	Round = 60	Wdropout = 0.8146	Wothers = 2.0394	Value = -0.6807 
+<pre>elapsed = 2.52	Round = 1	Wdropout = 0.5026	Wothers = 14.5008	Value = -0.8021 
+elapsed = 2.35	Round = 2	Wdropout = 1.2036	Wothers = 13.6810	Value = -0.7948 
+elapsed = 2.42	Round = 3	Wdropout = 0.6726	Wothers = 10.8245	Value = -0.7885 
+elapsed = 2.30	Round = 4	Wdropout = 1.3362	Wothers = 12.2388	Value = -0.7901 
+elapsed = 1.86	Round = 5	Wdropout = 1.4167	Wothers = 1.8323	Value = -0.7065 
+elapsed = 2.38	Round = 6	Wdropout = 0.1638	Wothers = 7.9502	Value = -0.7772 
+elapsed = 2.48	Round = 7	Wdropout = 0.8393	Wothers = 11.7392	Value = -0.7920 
+elapsed = 2.22	Round = 8	Wdropout = 1.3494	Wothers = 4.4215	Value = -0.7078 
+elapsed = 2.31	Round = 9	Wdropout = 0.8720	Wothers = 5.7954	Value = -0.7411 
+elapsed = 2.25	Round = 10	Wdropout = 0.7393	Wothers = 4.6269	Value = -0.7214 
+elapsed = 1.99	Round = 11	Wdropout = 1.4396	Wothers = 3.4278	Value = -0.6854 
+elapsed = 2.34	Round = 12	Wdropout = 0.7347	Wothers = 7.0964	Value = -0.7611 
+elapsed = 2.36	Round = 13	Wdropout = 1.0486	Wothers = 7.0853	Value = -0.7555 
+elapsed = 2.20	Round = 14	Wdropout = 0.9017	Wothers = 6.4794	Value = -0.7549 
+elapsed = 2.15	Round = 15	Wdropout = 0.2441	Wothers = 3.5580	Value = -0.7065 
+elapsed = 1.99	Round = 16	Wdropout = 1.3598	Wothers = 3.3739	Value = -0.6865 
+elapsed = 2.25	Round = 17	Wdropout = 0.4445	Wothers = 4.6460	Value = -0.7270 
+elapsed = 2.29	Round = 18	Wdropout = 0.1589	Wothers = 7.7905	Value = -0.7758 
+elapsed = 2.18	Round = 19	Wdropout = 0.5591	Wothers = 5.0906	Value = -0.7321 
+elapsed = 2.39	Round = 20	Wdropout = 1.4363	Wothers = 13.0807	Value = -0.7882 
+elapsed = 1.82	Round = 21	Wdropout = 1.3454	Wothers = 2.1187	Value = -0.6866 
+elapsed = 2.39	Round = 22	Wdropout = 1.0699	Wothers = 7.4697	Value = -0.7585 
+elapsed = 2.35	Round = 23	Wdropout = 0.9967	Wothers = 12.2855	Value = -0.7920 
+elapsed = 2.00	Round = 24	Wdropout = 1.4920	Wothers = 3.1456	Value = -0.6820 
+elapsed = 2.38	Round = 25	Wdropout = 1.0180	Wothers = 9.0728	Value = -0.7736 
+elapsed = 2.19	Round = 26	Wdropout = 1.0919	Wothers = 4.2882	Value = -0.7066 
+elapsed = 2.05	Round = 27	Wdropout = 0.8617	Wothers = 3.2217	Value = -0.6791 
+elapsed = 2.44	Round = 28	Wdropout = 0.9318	Wothers = 11.6697	Value = -0.7922 
+elapsed = 2.38	Round = 29	Wdropout = 0.5048	Wothers = 13.5831	Value = -0.8019 
+elapsed = 2.32	Round = 30	Wdropout = 0.3060	Wothers = 6.5552	Value = -0.7610 
+elapsed = 1.99	Round = 31	Wdropout = 0.9995	Wothers = 2.7991	Value = -0.6594 
+elapsed = 2.02	Round = 32	Wdropout = 0.3440	Wothers = 2.6643	Value = -0.6739 
+elapsed = 1.91	Round = 33	Wdropout = 0.7458	Wothers = 2.6994	Value = -0.6604 
+elapsed = 2.17	Round = 34	Wdropout = 0.1000	Wothers = 3.0080	Value = -0.6982 
+elapsed = 1.99	Round = 35	Wdropout = 0.1000	Wothers = 2.0411	Value = -0.6751 
+elapsed = 2.08	Round = 36	Wdropout = 0.1000	Wothers = 1.5006	Value = -0.6884 
+elapsed = 2.13	Round = 37	Wdropout = 0.4597	Wothers = 1.0000	Value = -0.7028 
+elapsed = 1.93	Round = 38	Wdropout = 1.0000	Wothers = 2.5898	Value = -0.6521 
+elapsed = 2.00	Round = 39	Wdropout = 0.5456	Wothers = 2.3489	Value = -0.6523 
+elapsed = 2.09	Round = 40	Wdropout = 0.1000	Wothers = 2.3258	Value = -0.6806 
+elapsed = 2.03	Round = 41	Wdropout = 0.4625	Wothers = 1.8618	Value = -0.6465 
+elapsed = 1.87	Round = 42	Wdropout = 0.5502	Wothers = 1.5095	Value = -0.6630 
+elapsed = 1.96	Round = 43	Wdropout = 0.4609	Wothers = 2.0500	Value = -0.6487 
+elapsed = 2.07	Round = 44	Wdropout = 0.3861	Wothers = 1.8135	Value = -0.6517 
+elapsed = 1.91	Round = 45	Wdropout = 0.6293	Wothers = 2.0589	Value = -0.6452 
+elapsed = 1.88	Round = 46	Wdropout = 0.5835	Wothers = 1.8797	Value = -0.6430 
+elapsed = 2.22	Round = 47	Wdropout = 0.6787	Wothers = 3.7693	Value = -0.6990 
+elapsed = 1.98	Round = 48	Wdropout = 0.5838	Wothers = 1.8443	Value = -0.6454 
+elapsed = 2.06	Round = 49	Wdropout = 0.5421	Wothers = 3.1763	Value = -0.6835 
+elapsed = 2.01	Round = 50	Wdropout = 0.3021	Wothers = 1.4084	Value = -0.6717 
+elapsed = 2.04	Round = 51	Wdropout = 0.2370	Wothers = 2.1040	Value = -0.6700 
+elapsed = 1.98	Round = 52	Wdropout = 0.8909	Wothers = 2.6161	Value = -0.6566 
+elapsed = 1.97	Round = 53	Wdropout = 0.7567	Wothers = 1.0000	Value = -0.7256 
+elapsed = 1.88	Round = 54	Wdropout = 0.5812	Wothers = 1.9596	Value = -0.6436 
+elapsed = 1.94	Round = 55	Wdropout = 0.5275	Wothers = 2.0774	Value = -0.6493 
+elapsed = 1.87	Round = 56	Wdropout = 0.7054	Wothers = 2.3754	Value = -0.6515 
+elapsed = 2.04	Round = 57	Wdropout = 0.4600	Wothers = 2.0294	Value = -0.6507 
+elapsed = 1.97	Round = 58	Wdropout = 0.5236	Wothers = 2.1701	Value = -0.6473 
+elapsed = 1.93	Round = 59	Wdropout = 0.5310	Wothers = 2.0294	Value = -0.6457 
+elapsed = 2.01	Round = 60	Wdropout = 0.5580	Wothers = 2.1510	Value = -0.6476 
 
  Best Parameters Found: 
-Round = 59	Wdropout = 0.9502	Wothers = 1.9587	Value = -0.6778 
+Round = 46	Wdropout = 0.5835	Wothers = 1.8797	Value = -0.6430 
 </pre>
 </div>
 </div>
@@ -14473,15 +14473,15 @@ Round = 59	Wdropout = 0.9502	Wothers = 1.9587	Value = -0.6778
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span>InfoW <span class="o">=</span> <span class="kp">rep</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">7</span><span class="p">)</span>
 InfoW<span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="o">=</span> <span class="m">1</span>
-InfoW<span class="p">[</span><span class="m">2</span><span class="p">]</span> <span class="o">=</span> <span class="m">0.9502</span>
-InfoW<span class="p">[</span><span class="m">3</span><span class="o">:</span><span class="m">23</span><span class="p">]</span> <span class="o">=</span> <span class="m">1.9587</span>
+InfoW<span class="p">[</span><span class="m">2</span><span class="p">]</span> <span class="o">=</span> <span class="m">0.5835</span>
+InfoW<span class="p">[</span><span class="m">3</span><span class="o">:</span><span class="m">23</span><span class="p">]</span> <span class="o">=</span> <span class="m">1.8797</span>
 
-eval_test<span class="p">(</span>InfoW<span class="p">,</span> SDs_test<span class="p">,</span> fnm <span class="o">=</span> <span class="s">&#39;v1_1&#39;</span><span class="p">)</span>
+eval_test<span class="p">(</span>InfoW<span class="p">,</span> SDs_test<span class="p">,</span> fnm <span class="o">=</span> <span class="s">&#39;v1_2&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14499,7 +14499,7 @@ eval_test<span class="p">(</span>InfoW<span class="p">,</span> SDs_test<span cla
 
 
 <div class="output_html rendered_html output_subarea ">
-0.683848797250859
+0.637457044673539
 </div>
 
 </div>

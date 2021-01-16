@@ -69,7 +69,7 @@ InfoW[4:26] = 3</code></pre>
 </div>
 <div id="generating-final-submission-file-for-subchallenge-3" class="section level2">
 <h2>Generating final submission file for subchallenge 3</h2>
-<pre><code>aTree2 &lt;- x %&gt;% dist_weighted_hamming(InfoW) %&gt;% fastme.ols()
+<pre><code>aTree2 &lt;- x %&gt;% dist_weighted_hamming(InfoW, dropout=FALSE) %&gt;% fastme.ols()
 write.tree(aTree2, &quot;Kwak_Gongsub3_submission.nw&quot;)
 </code></pre>
 <p>Thanks!</p>

@@ -1,0 +1,5 @@
+id	dist_method	tree_method	rf
+1	weighted_hamming	nj	0.513231197771588
+1	weighted_hamming	upgma	0.545264623955432
+1	weighted_hamming	fastme	0.479108635097493
+1	weighted_hamming	fastme_tree_rearrangement	0.444986072423398

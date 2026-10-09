@@ -1,0 +1,30 @@
+/* CAU ET minimal refresh — preserves the academic, white/green appearance. */
+:root{color-scheme:light;--ink:#252a25;--muted:#687168;--green:#577f20;--link:#275b43;--rule:#d9dfd8;--soft:#f8faf7;--award:#2357ab}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font:16px/1.75 Georgia,'Times New Roman',serif;-webkit-font-smoothing:antialiased}
+a{color:var(--link);text-decoration:none;text-underline-offset:3px}
+a:hover,a:focus-visible{text-decoration:underline}
+a:focus-visible,button:focus-visible{outline:2px solid var(--green);outline-offset:4px}
+.site-header{border-bottom:5px solid #5f8450}
+.header-inner{max-width:1460px;margin:auto;padding:26px 36px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.brand{font-family:Arial,Helvetica,sans-serif;font-size:28px;letter-spacing:-.6px;font-weight:750;color:#222;white-space:nowrap}
+.brand span{color:var(--green)}
+.navigation{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;column-gap:9px;row-gap:5px;font-family:Georgia,'Times New Roman',serif;font-size:15px;font-weight:600}
+.navigation a{color:#313831}.navigation .nav-minor{font-size:12px;color:var(--green);font-weight:500;margin-left:-5px}
+.navigation .separator{color:#b4bdb1;font-weight:400}
+.hero{min-height:360px;padding:38px 24px 42px;display:flex;align-items:center;justify-content:center;border-bottom:5px solid #5f8450}
+.lab-logo{display:block;height:auto;width:auto;max-width:min(94%,700px);max-height:520px;object-fit:contain}
+.news-section{max-width:1180px;margin:0 auto;padding:45px 30px 70px}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;border-bottom:2px solid #6c9260;gap:20px;padding-bottom:10px;margin-bottom:7px}
+h1{font-size:27px;line-height:1.3;margin:0;font-weight:700}.section-note{font:12px/1.5 Arial,Helvetica,sans-serif;letter-spacing:.04em;color:var(--muted)}
+.news-list{list-style:none;margin:0;padding:0}.news-item{padding:17px 4px;display:grid;grid-template-columns:84px minmax(0,1fr);gap:16px;border-bottom:1px solid var(--rule)}
+.news-item[hidden]{display:none}.news-item time{font:600 13px/1.7 Arial,Helvetica,sans-serif;color:#727e70;padding-top:3px;white-space:nowrap}
+.news-content{font-size:15.5px;line-height:1.72;overflow-wrap:break-word}
+.lab-author{color:#669900;font-weight:600}.achievement{color:var(--award);font-weight:700;margin-right:6px}
+.news-actions{text-align:center;padding-top:25px}.show-more{border:1px solid #b1bdb0;background:#fff;color:#31543c;border-radius:5px;padding:12px 24px;font:600 14px Arial,Helvetica,sans-serif;cursor:pointer}.show-more:hover{background:var(--soft)}
+.archive-note{margin:19px 0 0;font:13px/1.6 Arial,Helvetica,sans-serif;color:var(--muted)}
+.site-footer{border-top:1px solid var(--rule);max-width:1180px;margin:0 auto;padding:24px 30px 36px;font:12px/1.6 Arial,Helvetica,sans-serif;color:#798379;text-align:center}
+@media(max-width:1050px){.header-inner{align-items:flex-start;flex-direction:column;gap:12px}.navigation{justify-content:flex-start}.hero{min-height:280px}.lab-logo{max-height:410px}}
+@media(max-width:600px){body{font-size:15px}.header-inner{padding:18px 18px 20px}.brand{font-size:25px}.navigation{font-size:13px;gap:5px 7px}.navigation .separator{display:none}.navigation a{margin-right:7px}.hero{min-height:190px;padding:26px 12px}.lab-logo{max-width:100%;max-height:300px}.news-section{padding:30px 17px 45px}.section-head{align-items:center}h1{font-size:24px}.section-note{font-size:10px}.news-item{grid-template-columns:1fr;gap:2px;padding:14px 0}.news-item time{padding-top:0;font-size:12px}.news-content{font-size:14.5px;line-height:1.65}.site-footer{margin:0 17px;padding:20px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

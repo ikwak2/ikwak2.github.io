@@ -49,3 +49,49 @@ h1{font-size:27px;line-height:1.3;margin:0;font-weight:700}.section-note{font:12
 .about-footer{display:flex;justify-content:space-between;align-items:center;gap:15px;text-align:left}
 .about-footer img{width:auto;max-width:110px;height:auto;max-height:65px}
 @media(max-width:600px){.about-page{padding:30px 17px 40px}.about-section{margin-bottom:35px}.about-section .section-head h2{font-size:24px}.about-copy{font-size:14.5px;line-height:1.72}.contact-layout{gap:18px;flex-wrap:wrap}.contact-details{flex-basis:100%}.profile-photo{max-width:210px}.competition-item{grid-template-columns:1fr;gap:3px;padding:14px 0;font-size:14.5px}.competition-item time{font-size:12px}.about-footer{margin:0 17px}}
+
+/* v2: consistent desktop contact columns and small-screen usability */
+img { max-width: 100%; }
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 263px;
+  align-items: start;
+  gap: clamp(24px, 5vw, 72px);
+  width: 100%;
+}
+.contact-details { min-width: 0; }
+.contact-layout .profile-photo {
+  display: block;
+  width: 263px;
+  max-width: 100%;
+  height: auto;
+  justify-self: end;
+  align-self: start;
+}
+@media (max-width: 800px) {
+  .header-inner { padding: 18px 22px; }
+  .navigation { gap: 7px 10px; }
+  .about-page, .news-section { padding-left: 22px; padding-right: 22px; }
+  .contact-layout { grid-template-columns: minmax(0, 1fr) 220px; gap: 24px; }
+  .contact-layout .profile-photo { width: 220px; }
+}
+@media (max-width: 600px) {
+  .header-inner { padding: 16px; gap: 12px; }
+  .navigation { font-size: 14px; line-height: 1.8; gap: 3px 10px; }
+  .navigation a { margin-right: 0; }
+  .about-page, .news-section { padding-left: 16px; padding-right: 16px; }
+  .section-head { flex-wrap: wrap; }
+  .contact-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+  .contact-layout .profile-photo {
+    width: min(70vw, 240px);
+    justify-self: start;
+  }
+  .contact-details p { overflow-wrap: anywhere; }
+  .competition-item, .news-item { grid-template-columns: minmax(0, 1fr); }
+  .competition-item > div, .news-content { min-width: 0; overflow-wrap: anywhere; }
+  .site-footer { padding-left: 0; padding-right: 0; }
+}

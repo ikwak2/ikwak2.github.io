@@ -258,3 +258,17 @@ img { max-width: 100%; }
 @media (prefers-reduced-motion: reduce) {
   .navigation > a:not(.nav-minor), .navigation > a:not(.nav-minor)::after { transition: none; }
 }
+
+/* v11 — larger desktop navigation; retain mobile sizing. */
+@media (min-width: 1100px) {
+  .navigation { font-size: 20px; }
+  .navigation .nav-minor { font-size: 15px; }
+}
+@media (min-width: 601px) and (max-width: 1099px) {
+  .navigation { font-size: 18px; }
+  .navigation .nav-minor { font-size: 14px; }
+}
+@media (max-width: 600px) {
+  .navigation { font-size: 15px; }
+  .navigation .nav-minor { font-size: 13px; }
+}

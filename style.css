@@ -95,3 +95,29 @@ img { max-width: 100%; }
   .competition-item > div, .news-content { min-width: 0; overflow-wrap: anywhere; }
   .site-footer { padding-left: 0; padding-right: 0; }
 }
+
+/* v4 — Shared responsive styles for secondary pages. */
+.section-page{max-width:1180px;margin:0 auto;padding:38px 30px 68px;min-width:0}
+.section-page .section-title{font-size:27px;line-height:1.35;margin:20px 0 9px}
+.section-page .section-title:first-child{margin-top:0}
+.section-page .section-rule{display:block;border:0;border-top:2px solid #6c9260;height:0;margin:0 0 25px}
+.section-page table{max-width:100%;width:100%;border-collapse:collapse;table-layout:auto}
+.section-page table td{padding:9px 12px;vertical-align:top}
+.section-page table[width] {width:100%}
+.section-page p{margin:0 0 15px;overflow-wrap:anywhere}
+.section-page a{overflow-wrap:anywhere}
+.section-page h4[id]{font:700 21px/1.4 Georgia,'Times New Roman',serif;color:#385b33;margin:29px 0 14px;padding-bottom:8px;border-bottom:1px solid var(--rule);scroll-margin-top:20px}
+.section-page li{padding-bottom:5px}
+.section-page font[color="#669900"]{color:#669900}
+.section-page font[color="#FF7975"]{color:#cf655f}
+.student-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:12px 0 45px}
+.student-card{display:grid;grid-template-columns:125px minmax(0,1fr);gap:19px;align-items:start;border:1px solid #e1e7dd;border-radius:6px;padding:19px;background:#fff;min-width:0}
+.student-photo img{display:block;width:125px;height:160px;object-fit:cover;object-position:top center;border-radius:3px}
+.student-details{min-width:0;font-size:14px;line-height:1.68;overflow-wrap:anywhere}
+.student-details .student-heading{font-size:19px;line-height:1.35;margin:0 0 10px}
+.student-name{color:#669900}
+.section-publications table td,.section-teaching table td,.section-software table td,.section-tutorials table td,.section-photos table td{padding:6px 0}
+.section-publications table p{padding:0 0 9px;border-bottom:1px solid #eef0ed}
+.section-photos img{height:auto;max-width:100%}
+@media(max-width:850px){.student-grid{grid-template-columns:1fr}.section-page{padding:32px 22px 55px}}
+@media(max-width:600px){.section-page{padding:26px 16px 44px}.section-page .section-title{font-size:24px}.student-card{grid-template-columns:92px minmax(0,1fr);gap:13px;padding:12px}.student-photo img{width:92px;height:123px}.student-details{font-size:13px}.student-details .student-heading{font-size:17px}.section-page table{display:block;overflow-x:auto;max-width:100%;-webkit-overflow-scrolling:touch}.section-page table td{padding:5px 3px}.section-photos img{max-width:100%}}

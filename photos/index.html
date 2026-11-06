@@ -5,6 +5,16 @@
 .photo-pagination { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 1rem; }
 .photo-pagination .show-more:disabled { opacity: .45; cursor: default; }
 #photo-page-status { white-space: nowrap; }
+#photo-gallery .photo-card img { cursor: zoom-in; }
+#photo-gallery .photo-card img:focus-visible { outline: 3px solid #2563eb; outline-offset: 4px; }
+.photo-lightbox { width: min(96vw, 1600px); max-width: 96vw; max-height: 94vh; max-height: 94dvh; margin: auto; padding: 0; border: 0; border-radius: 12px; background: #111827; color: #fff; overflow: auto; box-shadow: 0 20px 80px rgba(0, 0, 0, .45); }
+.photo-lightbox::backdrop { background: rgba(0, 0, 0, .86); }
+.photo-lightbox figure { display: flex; flex-direction: column; align-items: center; gap: 1rem; margin: 0; padding: 3.5rem 1rem 1.25rem; }
+.photo-lightbox img { display: block; width: auto; height: auto; max-width: 100%; max-height: calc(90vh - 9rem); max-height: calc(90dvh - 9rem); object-fit: contain; }
+.photo-lightbox figcaption { max-width: 80ch; margin: 0; color: #fff; font-size: 1rem; line-height: 1.5; text-align: center; overflow-wrap: anywhere; }
+.photo-lightbox-close { position: absolute; top: .5rem; right: .5rem; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid #64748b; border-radius: 50%; background: #1e293b; color: #fff; font: 32px/1 sans-serif; cursor: pointer; }
+.photo-lightbox-close:hover { background: #334155; }
+.photo-lightbox-close:focus-visible { outline: 3px solid #93c5fd; outline-offset: 3px; }
 </style></head><body><header class="site-header">
 <div class="header-inner">
 <a aria-label="CAU ET home" class="brand" href="../index.html">CAU <span>ET</span></a>
@@ -17,7 +27,7 @@
 <span class="separator">|</span><a href="../photos/index.html">Photos</a>
 </nav>
 </div>
-</header><main class="inner-page"><h1>Photos</h1><p class="photo-intro">Recent lab moments and achievements. Browse the gallery, 10 photos per page.</p><div class="photo-grid" id="photo-gallery"><article class="photo-card"><img alt="Byeongchan presenting at DCASE 2026" loading="lazy" src="dcase_kim.jpg"/><div class="photo-caption">2026.10 Byeongchan is presenting our work at the DCASE 2026 Workshop, Boston, US.</div></article><article class="photo-card"><img alt="Nahyun presenting her poster at EMNLP Workshop 2026" loading="lazy" src="nh_emnlp.jpg"/><div class="photo-caption">2026.10 Nahyun is doing her poster presentation at EMNLP Workshop 2026, Budapest, Hungary.</div></article><article class="photo-card"><img alt="CAU team award certificate for DCASE 2026 Challenge Task 5" loading="lazy" src="DCASE_1st.jpg"/><div class="photo-caption">2026.10 Our CAU team won first place in Task 5 at the DCASE 2026 Challenge.</div></article><article class="photo-card"><img alt="2026_cinc" loading="lazy" src="cinc2026.jpg"/><div class="photo-caption">2026.9 Our team presented our work at CinC 2026 in Madrid, Spain.</div></article><article class="photo-card"><img alt="2026_ijcai" loading="lazy" src="ijcai_poster.jpg"/><div class="photo-caption">2026.8 Our team presented our work at IJCAI 2026 in Bremen, German.</div></article><article class="photo-card"><img alt="2026grad" loading="lazy" src="2026_grad.jpg"/><div class="photo-caption">2026.8 With the Graduates (Fall Semester 2026)</div></article><article class="photo-card"><img alt="2026_t" loading="lazy" src="2026teacherday.jpg"/><div class="photo-caption">2026.5 Teacher's Day group photo (2026)</div></article><article class="photo-card"><img alt="2026gc" loading="lazy" src="esdd1.jpg"/><div class="photo-caption">2026.5 CAU_KU team received 3rd place award at the ESDD challenge (ICASSP 2026 Challenge track)</div></article><article class="photo-card"><img alt="Il-Youp presenting at the Fukuoka Statistics DS Workshop" loading="lazy" src="IMG-5906.JPG"/><div class="photo-caption">2026.3 Il-Youp presented our work at the Fukuoka Statistics DS Workshop 2026, Kyushu University, Japan.</div></article><article class="photo-card"><img alt="2026_g" loading="lazy" src="alumni_gathering2026.jpg"/><div class="photo-caption">2026.2 Alumni gathering.</div></article><article class="photo-card" hidden=""><img alt="2026_1_grad" loading="lazy" src="2026_1_grad.jpg"/><div class="photo-caption">2026.2 With the Graduates (Spring Semester 2026)</div></article><article class="photo-card" hidden=""><img alt="2025_CinC" loading="lazy" src="hmd_conf.jpg"/><div class="photo-caption">2025.9 Nahyun is doing her poster presentation at CinC 2025, São Paulo, Brazil.</div></article><article class="photo-card" hidden=""><img alt="2025_fall_grad2" loading="lazy" src="2025_2_grad1.jpg"/><div class="photo-caption">2025.8 With the Graduates (Fall Semester 2025)</div></article><article class="photo-card" hidden=""><img alt="2025_teacherday" loading="lazy" src="2025teacherday.jpg"/><div class="photo-caption">2025.5 Teacher's day group photo (2025)</div></article><article class="photo-card" hidden=""><img alt="2025_aaaiworkshop" loading="lazy" src="mj_workshop.png"/><div class="photo-caption">2025.3 Minjung is doing her poster presentation at PPAI-25(AAAI workshop), PA, USA.</div></article><article class="photo-card" hidden=""><img alt="2025_grad_fall1" loading="lazy" src="2025_pic1.jpg"/><div class="photo-caption">2025.2 With the Graduates (Spring Semester 2025)</div></article><article class="photo-card" hidden=""><img alt="2025_grad_fall2" loading="lazy" src="2025_pic2.jpg"/><div class="photo-caption">2025.2 With the Graduates (Spring Semester 2025)</div></article><article class="photo-card" hidden=""><img alt="2024_grad_fall" loading="lazy" src="2024g1.jpg"/><div class="photo-caption">2024.8 With the Graduates (Fall Semester 2024)</div></article><article class="photo-card" hidden=""><img alt="2024_grad_fall" loading="lazy" src="2024g2.jpg"/><div class="photo-caption">2024.8 With the Graduates (Fall Semester 2024)</div></article><article class="photo-card" hidden=""><img alt="2024_1_pic" loading="lazy" src="2024_1_pic.jpg"/><div class="photo-caption">2024.5 Teacher's Day group photo (2024)</div></article><article class="photo-card" hidden=""><img alt="2024_1_grad" loading="lazy" src="2024_1_grad.jpg"/><div class="photo-caption">2024.2 With the Graduates (Spring Semester 2024)</div></article><article class="photo-card" hidden=""><img alt="ijcai" loading="lazy" src="shan1.jpg"/><div class="photo-caption">2023.8 Soyul is presenting at the IJCAI 2023 Workshop, Macao, China.</div></article><article class="photo-card" hidden=""><img alt="ijcai certificate" loading="lazy" src="ijcai_certificate.jpg"/><div class="photo-caption">2023.8 CAU_KU team received 3rd place award at the ADD competition (IJCAI 2023 Challenge track)</div></article><article class="photo-card" hidden=""><img alt="Group photo" loading="lazy" src="pic20230512.jpg"/><div class="photo-caption">2023.5 Teacher's Day group photo (2023)</div></article><article class="photo-card" hidden=""><img alt="Wuming and Juhyun" loading="lazy" src="jh.jpg"/><div class="photo-caption">2022.11 Wuming (mid) and Juhyun (right) received a winners certificate from Pablo (left) at RSGDREAM 2022, Las Vegas, USA</div></article><article class="photo-card" hidden=""><img alt="dream" loading="lazy" src="dream_certificate2022.jpg"/><div class="photo-caption">2022.11 DREAM challenge winners certificate (3rd place)</div></article><article class="photo-card" hidden=""><img alt="JK and TI" loading="lazy" src="jknti.jpg"/><div class="photo-caption">2022.9 Taein (left) and Jungguk (right) doing poster presentation at CinC 2022, Tampere, Finland.</div></article><article class="photo-card" hidden=""><img alt="icassp" loading="lazy" src="add2022_certificate.png"/><div class="photo-caption">2022.1 CAU_KU team received 3rd place award at the ADD competition (ICASSP 2022 Challenge track)</div></article><article class="photo-card" hidden=""><img alt="2022.4" loading="lazy" src="all1.jpg"/><div class="photo-caption">2022.5 Teacher's Day group photo (2022)</div></article></div><nav class="subpage-actions photo-pagination" aria-label="Photo gallery pages">
+</header><main class="inner-page"><h1>Photos</h1><p class="photo-intro">Recent lab moments and achievements. Browse the gallery, 10 photos per page. Click a photo to enlarge.</p><div class="photo-grid" id="photo-gallery"><article class="photo-card"><img alt="Byeongchan presenting at DCASE 2026" loading="lazy" src="dcase_kim.jpg"/><div class="photo-caption">2026.10 Byeongchan is presenting our work at the DCASE 2026 Workshop, Boston, US.</div></article><article class="photo-card"><img alt="Nahyun presenting her poster at EMNLP Workshop 2026" loading="lazy" src="nh_emnlp.jpg"/><div class="photo-caption">2026.10 Nahyun is doing her poster presentation at EMNLP Workshop 2026, Budapest, Hungary.</div></article><article class="photo-card"><img alt="CAU team award certificate for DCASE 2026 Challenge Task 5" loading="lazy" src="DCASE_1st.jpg"/><div class="photo-caption">2026.10 Our CAU team won first place in Task 5 at the DCASE 2026 Challenge.</div></article><article class="photo-card"><img alt="2026_cinc" loading="lazy" src="cinc2026.jpg"/><div class="photo-caption">2026.9 Our team presented our work at CinC 2026 in Madrid, Spain.</div></article><article class="photo-card"><img alt="2026_ijcai" loading="lazy" src="ijcai_poster.jpg"/><div class="photo-caption">2026.8 Our team presented our work at IJCAI 2026 in Bremen, German.</div></article><article class="photo-card"><img alt="2026grad" loading="lazy" src="2026_grad.jpg"/><div class="photo-caption">2026.8 With the Graduates (Fall Semester 2026)</div></article><article class="photo-card"><img alt="2026_t" loading="lazy" src="2026teacherday.jpg"/><div class="photo-caption">2026.5 Teacher's Day group photo (2026)</div></article><article class="photo-card"><img alt="2026gc" loading="lazy" src="esdd1.jpg"/><div class="photo-caption">2026.5 CAU_KU team received 3rd place award at the ESDD challenge (ICASSP 2026 Challenge track)</div></article><article class="photo-card"><img alt="Il-Youp presenting at the Fukuoka Statistics DS Workshop" loading="lazy" src="IMG-5906.JPG"/><div class="photo-caption">2026.3 Il-Youp presented our work at the Fukuoka Statistics DS Workshop 2026, Kyushu University, Japan.</div></article><article class="photo-card"><img alt="2026_g" loading="lazy" src="alumni_gathering2026.jpg"/><div class="photo-caption">2026.2 Alumni gathering.</div></article><article class="photo-card" hidden=""><img alt="2026_1_grad" loading="lazy" src="2026_1_grad.jpg"/><div class="photo-caption">2026.2 With the Graduates (Spring Semester 2026)</div></article><article class="photo-card" hidden=""><img alt="2025_CinC" loading="lazy" src="hmd_conf.jpg"/><div class="photo-caption">2025.9 Nahyun is doing her poster presentation at CinC 2025, São Paulo, Brazil.</div></article><article class="photo-card" hidden=""><img alt="2025_fall_grad2" loading="lazy" src="2025_2_grad1.jpg"/><div class="photo-caption">2025.8 With the Graduates (Fall Semester 2025)</div></article><article class="photo-card" hidden=""><img alt="2025_teacherday" loading="lazy" src="2025teacherday.jpg"/><div class="photo-caption">2025.5 Teacher's day group photo (2025)</div></article><article class="photo-card" hidden=""><img alt="2025_aaaiworkshop" loading="lazy" src="mj_workshop.png"/><div class="photo-caption">2025.3 Minjung is doing her poster presentation at PPAI-25(AAAI workshop), PA, USA.</div></article><article class="photo-card" hidden=""><img alt="2025_grad_fall1" loading="lazy" src="2025_pic1.jpg"/><div class="photo-caption">2025.2 With the Graduates (Spring Semester 2025)</div></article><article class="photo-card" hidden=""><img alt="2025_grad_fall2" loading="lazy" src="2025_pic2.jpg"/><div class="photo-caption">2025.2 With the Graduates (Spring Semester 2025)</div></article><article class="photo-card" hidden=""><img alt="2024_grad_fall" loading="lazy" src="2024g1.jpg"/><div class="photo-caption">2024.8 With the Graduates (Fall Semester 2024)</div></article><article class="photo-card" hidden=""><img alt="2024_grad_fall" loading="lazy" src="2024g2.jpg"/><div class="photo-caption">2024.8 With the Graduates (Fall Semester 2024)</div></article><article class="photo-card" hidden=""><img alt="2024_1_pic" loading="lazy" src="2024_1_pic.jpg"/><div class="photo-caption">2024.5 Teacher's Day group photo (2024)</div></article><article class="photo-card" hidden=""><img alt="2024_1_grad" loading="lazy" src="2024_1_grad.jpg"/><div class="photo-caption">2024.2 With the Graduates (Spring Semester 2024)</div></article><article class="photo-card" hidden=""><img alt="ijcai" loading="lazy" src="shan1.jpg"/><div class="photo-caption">2023.8 Soyul is presenting at the IJCAI 2023 Workshop, Macao, China.</div></article><article class="photo-card" hidden=""><img alt="ijcai certificate" loading="lazy" src="ijcai_certificate.jpg"/><div class="photo-caption">2023.8 CAU_KU team received 3rd place award at the ADD competition (IJCAI 2023 Challenge track)</div></article><article class="photo-card" hidden=""><img alt="Group photo" loading="lazy" src="pic20230512.jpg"/><div class="photo-caption">2023.5 Teacher's Day group photo (2023)</div></article><article class="photo-card" hidden=""><img alt="Wuming and Juhyun" loading="lazy" src="jh.jpg"/><div class="photo-caption">2022.11 Wuming (mid) and Juhyun (right) received a winners certificate from Pablo (left) at RSGDREAM 2022, Las Vegas, USA</div></article><article class="photo-card" hidden=""><img alt="dream" loading="lazy" src="dream_certificate2022.jpg"/><div class="photo-caption">2022.11 DREAM challenge winners certificate (3rd place)</div></article><article class="photo-card" hidden=""><img alt="JK and TI" loading="lazy" src="jknti.jpg"/><div class="photo-caption">2022.9 Taein (left) and Jungguk (right) doing poster presentation at CinC 2022, Tampere, Finland.</div></article><article class="photo-card" hidden=""><img alt="icassp" loading="lazy" src="add2022_certificate.png"/><div class="photo-caption">2022.1 CAU_KU team received 3rd place award at the ADD competition (ICASSP 2022 Challenge track)</div></article><article class="photo-card" hidden=""><img alt="2022.4" loading="lazy" src="all1.jpg"/><div class="photo-caption">2022.5 Teacher's Day group photo (2022)</div></article></div><nav class="subpage-actions photo-pagination" aria-label="Photo gallery pages">
 <button class="show-more" id="photo-prev" type="button" aria-controls="photo-gallery" disabled="">Previous</button>
 <span id="photo-page-status" role="status" aria-live="polite" aria-atomic="true">Page 1 of 3</span>
 <button class="show-more" id="photo-next" type="button" aria-controls="photo-gallery">Next</button>
@@ -56,5 +66,59 @@
     }
   });
   renderPage();
+}());
+</script>
+<dialog class="photo-lightbox" id="photo-lightbox" aria-label="Enlarged photo" aria-describedby="photo-lightbox-caption">
+<button class="photo-lightbox-close" id="photo-lightbox-close" type="button" aria-label="Close enlarged photo" autofocus="">&times;</button>
+<figure>
+<img id="photo-lightbox-image" alt="" decoding="async"/>
+<figcaption id="photo-lightbox-caption"></figcaption>
+</figure>
+</dialog>
+<script>
+(function () {
+  const lightbox = document.getElementById('photo-lightbox');
+  const enlargedImage = document.getElementById('photo-lightbox-image');
+  const caption = document.getElementById('photo-lightbox-caption');
+  const closeButton = document.getElementById('photo-lightbox-close');
+  let activeImage = null;
+  let previousOverflow = '';
+
+  function openPhoto(image) {
+    if (lightbox.open) return;
+    activeImage = image;
+    enlargedImage.src = image.currentSrc || image.src;
+    enlargedImage.alt = image.alt;
+    caption.textContent = image.closest('.photo-card').querySelector('.photo-caption').textContent;
+    previousOverflow = document.body.style.overflow;
+    lightbox.showModal();
+    document.body.style.overflow = 'hidden';
+  }
+
+  document.querySelectorAll('#photo-gallery .photo-card img').forEach(function (image) {
+    image.tabIndex = 0;
+    image.setAttribute('role', 'button');
+    image.setAttribute('aria-haspopup', 'dialog');
+    image.setAttribute('aria-controls', 'photo-lightbox');
+    image.setAttribute('aria-label', 'Enlarge photo: ' + image.alt);
+    image.addEventListener('click', function () { openPhoto(image); });
+    image.addEventListener('keydown', function (event) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openPhoto(image);
+      }
+    });
+  });
+
+  closeButton.addEventListener('click', function () { lightbox.close(); });
+  lightbox.addEventListener('click', function (event) {
+    if (event.target === lightbox) lightbox.close();
+  });
+  lightbox.addEventListener('close', function () {
+    document.body.style.overflow = previousOverflow;
+    enlargedImage.removeAttribute('src');
+    if (activeImage) activeImage.focus({ preventScroll: true });
+    activeImage = null;
+  });
 }());
 </script></body></html>

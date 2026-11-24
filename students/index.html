@@ -1,6 +1,61 @@
 <!DOCTYPE html>
 
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><title>Students | CAU ET</title><link href="../style.css?v=6" rel="stylesheet"/></head><body><header class="site-header">
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><title>Students | CAU ET</title><link href="../style.css?v=6" rel="stylesheet"/>
+<style id="student-homepage-links">
+/* Homepage links stretch across their cards while preserving the card layout. */
+.student-card--linked {
+  position: relative;
+  cursor: pointer;
+  transition: transform 180ms ease, box-shadow 180ms ease,
+              border-color 180ms ease, background-color 180ms ease;
+}
+.student-card--linked .student-homepage-link {
+  color: inherit;
+  text-decoration: none;
+}
+.student-card--linked .student-homepage-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: 8px;
+}
+.student-homepage-icon {
+  display: inline-block;
+  margin-left: 0.3em;
+  font-size: 0.85em;
+}
+.student-card--linked:focus-within {
+  outline: 3px solid var(--green, #286241);
+  outline-offset: 3px;
+  border-color: var(--green, #286241);
+  background-color: #f6faf3;
+}
+.student-card--linked .student-homepage-link:focus-visible {
+  outline: none;
+}
+.student-card--linked:focus-within .student-homepage-link {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+@media (hover: hover) {
+  .student-card--linked:hover {
+    transform: translateY(-3px);
+    border-color: var(--green, #286241);
+    background-color: #f6faf3;
+    box-shadow: 0 8px 22px rgba(40, 98, 65, 0.14);
+  }
+  .student-card--linked:hover .student-homepage-link {
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .student-card--linked { transition: none; }
+  .student-card--linked:hover { transform: none; }
+}
+</style>
+</head><body><header class="site-header">
 <div class="header-inner">
 <a aria-label="CAU ET home" class="brand" href="../index.html">CAU <span>ET</span></a>
 <nav aria-label="Main navigation" class="navigation">
@@ -44,15 +99,15 @@
 		  M.S. Student (Department of Statistics and Data Science)<br/>
 		    March 1, 2026 ~ Present <br/>
 		      Interests: Deep learning, Sound deepfake detection  <br/>
-</p></div></article><article class="student-card"><img alt="Jungchan Ryu" loading="lazy" src="pic/jc26.jpg"/><div class="student-description"><h2>Jungchan Ryu (류정찬)</h2><p class="large">
+</p></div></article><article class="student-card student-card--linked"><img alt="Jungchan Ryu" loading="lazy" src="pic/jc26.jpg"/><div class="student-description"><h2><a class="student-homepage-link" href="https://jc020230.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Jungchan Ryu (류정찬): personal homepage (opens in a new tab)" title="Visit personal homepage (opens in a new tab)">Jungchan Ryu (류정찬)<span class="student-homepage-icon" aria-hidden="true">↗</span></a></h2><p class="large">
 		  M.S. Student (Department of Statistics and Data Science)<br/>
 		    March 1, 2026 ~ Present <br/>
 		      Interests: Deep learning, Audio Vision Language Models, Audio Question Answering.  <br/>
-</p></div></article><article class="student-card"><img alt="Doyeon Kim" loading="lazy" src="pic/dy26.jpg"/><div class="student-description"><h2>Doyeon Kim (김도연)</h2><p class="large">
+</p></div></article><article class="student-card student-card--linked"><img alt="Doyeon Kim" loading="lazy" src="pic/dy26.jpg"/><div class="student-description"><h2><a class="student-homepage-link" href="https://rlaehdus0808.github.io/doyeon.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Doyeon Kim (김도연): personal homepage (opens in a new tab)" title="Visit personal homepage (opens in a new tab)">Doyeon Kim (김도연)<span class="student-homepage-icon" aria-hidden="true">↗</span></a></h2><p class="large">
 		  M.S. Student (Department of Smart Cities) <br/>
 		    March 1, 2026 ~ Present <br/>
 		      Interests: Deep learning, Biomedical data analysis, Statistical Genetics.  <br/>
-</p></div></article><article class="student-card"><img alt="Chaerin Lee" loading="lazy" src="pic/crl26.jpg"/><div class="student-description"><h2>Chaerin Lee (이채린)</h2><p class="large">
+</p></div></article><article class="student-card student-card--linked"><img alt="Chaerin Lee" loading="lazy" src="pic/crl26.jpg"/><div class="student-description"><h2><a class="student-homepage-link" href="https://zzaerrix.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Chaerin Lee (이채린): personal homepage (opens in a new tab)" title="Visit personal homepage (opens in a new tab)">Chaerin Lee (이채린)<span class="student-homepage-icon" aria-hidden="true">↗</span></a></h2><p class="large">
 		  M.S. Student (Department of Statistics and Data Science)<br/>
 		    September 1, 2026 ~ Present <br/>
 		      Interests: Deep learning, Statistical Genetics, Biostatistics <br/>

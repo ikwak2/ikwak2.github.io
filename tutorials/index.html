@@ -1,6 +1,50 @@
 <!DOCTYPE html>
 
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><title>Tutorials | CAU ET</title><link href="../style.css?v=6" rel="stylesheet"/></head><body><header class="site-header">
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><title>Tutorials | CAU ET</title><link href="../style.css?v=6" rel="stylesheet"/>
+<style id="tutorial-sections-style">
+/* Section headings for this tutorial list only. */
+.inner-page .legacy-content .tutorial-section {
+  margin: 0 0 2.75rem;
+}
+.inner-page .legacy-content .tutorial-section + .tutorial-section {
+  margin-top: 3rem;
+}
+.inner-page .legacy-content .tutorial-section-title {
+  margin: 0 0 1.25rem;
+  padding: 0 0 .75rem;
+  border-bottom: 2px solid #d5dfe6;
+  color: #203747;
+  font-size: clamp(1.5rem, 2.8vw, 1.9rem);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -.02em;
+}
+.inner-page .legacy-content .tutorial-list {
+  margin: 0;
+  padding: 0;
+}
+.inner-page .legacy-content .tutorial-entry + .tutorial-entry {
+  margin-top: 1.4rem;
+}
+.inner-page .legacy-content .tutorial-entry dt {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.inner-page .legacy-content .tutorial-entry dd {
+  margin: .4rem 0 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+@media (max-width: 600px) {
+  .inner-page .legacy-content .tutorial-section + .tutorial-section {
+    margin-top: 2.5rem;
+  }
+}
+</style>
+</head><body><header class="site-header">
 <div class="header-inner">
 <a aria-label="CAU ET home" class="brand" href="../index.html">CAU <span>ET</span></a>
 <nav aria-label="Main navigation" class="navigation">
@@ -14,28 +58,64 @@
 </div>
 </header><main class="inner-page"><h1>Tutorials</h1><div class="legacy-content"><table cellpadding="0" cellspacing="50" noborder="" width="100%">
 <tr> <td align="left" valign="top">
-<dl>
-<h4>On R/aSPU</h4>
-<p> <dt><a href="mappingSnpToGene2.html">Mapping Snp to Gene</a></dt>
-<dd> Assume you have rs-ids, and you want to map rs-ids to gene for gene based analysis. This page illustrate one way to do it. </dd> </p>
-<p> <dt><a href="CorrFromRef.html">Getting correlation estimate among SNPs from reference panel</a></dt>
-<dd> This page illustrate how one can get correlation estimate among SNPs from the reference panel. </dd> </p>
-<p> <dt><a href="ForMTgenes.html">R and Perl codes to perform aSPUs and MTaSPUsSet</a> </dt>
-<dd> Assume we have multi-trait summary statistics data for mapped SNPs from <a href="mappingSnpToGene2.html">Mapping Snp to Gene</a>, this page illustrate how to perform aSPUs or MTaSPUsSet test using Summary Statistics data</dd> </p>
-<p> <dt><a href="SpeedComp.html">Speed comparison using R, awk and Perl</a> </dt>
-<dd> I used `awk` in some tutorials. I did some speed comparisons.</dd></p>
-<p> <dt><a href="pathwayMani.html">Pathway data manipulation</a> </dt>
-<dd> Where to get pathways(or gene sets) and how to manipulate.</dd></p>
-<p> <dt><a href="aSPUstat.html">Vignette for aSPUs and aSPUsPath</a></dt>
-<dd> Adaptive Gene- and Pathway- Trait Association testing with GWAS Summary Statistics (aSPUs() and aSPUsPath()) </dd></p>
-<p> <dt><a href="MTaSPUsSet.html">Vignette for MTaSPUsSet</a> </dt>
-<dd> Adaptive Gene - Multitrait Association testing with GWAS Summary Statistics (MTaSPUsSet() ) </dd></p>
+<section class="tutorial-section" aria-labelledby="biosignal-analysis-title">
+<h2 class="tutorial-section-title" id="biosignal-analysis-title">On Biosignal Analysis</h2>
+<dl class="tutorial-list">
+<div class="tutorial-entry">
+<dt><a href="https://ikwak2.github.io/bio_sig_class/">ECG-based Biosignal Analysis <span lang="ko">(생체신호 분석)</span></a></dt>
+<dd>Lecture slides, Colab notebooks, and interactive exercises on ECG signal processing, machine learning, 1D/2D CNNs, ST-MEM, and LoRA.</dd>
+</div>
 </dl>
-<h4>On R/funqtl</h4>
-<p> <dt><a href="funqtl.html">Vignette for funqtl</a></dt>
-<dd> This vignette illustrates the use of the funqtl package for QTL mapping with function-valued traits (e.g., growth measured over time). </dd> </p>
-<p> <dt><a href="fun2mult.html">Vignette for fun2mult</a></dt>
-<dd> This vignette illustrates the use of the funqtl package for QTL mapping with function-valued traits using functional principal component analysis and multi-trait mapping. </dd> </p>
+</section>
+
+<section class="tutorial-section" aria-labelledby="r-aspu-title">
+<h2 class="tutorial-section-title" id="r-aspu-title">On R/aSPU</h2>
+<dl class="tutorial-list">
+<div class="tutorial-entry">
+<dt><a href="mappingSnpToGene2.html">Mapping Snp to Gene</a></dt>
+<dd> Assume you have rs-ids, and you want to map rs-ids to gene for gene based analysis. This page illustrate one way to do it. </dd>
+</div>
+<div class="tutorial-entry">
+<dt><a href="CorrFromRef.html">Getting correlation estimate among SNPs from reference panel</a></dt>
+<dd> This page illustrate how one can get correlation estimate among SNPs from the reference panel. </dd>
+</div>
+<div class="tutorial-entry">
+<dt><a href="ForMTgenes.html">R and Perl codes to perform aSPUs and MTaSPUsSet</a> </dt>
+<dd> Assume we have multi-trait summary statistics data for mapped SNPs from <a href="mappingSnpToGene2.html">Mapping Snp to Gene</a>, this page illustrate how to perform aSPUs or MTaSPUsSet test using Summary Statistics data</dd>
+</div>
+<div class="tutorial-entry">
+<dt><a href="SpeedComp.html">Speed comparison using R, awk and Perl</a> </dt>
+<dd> I used `awk` in some tutorials. I did some speed comparisons.</dd>
+</div>
+<div class="tutorial-entry">
+<dt><a href="pathwayMani.html">Pathway data manipulation</a> </dt>
+<dd> Where to get pathways(or gene sets) and how to manipulate.</dd>
+</div>
+<div class="tutorial-entry">
+<dt><a href="aSPUstat.html">Vignette for aSPUs and aSPUsPath</a></dt>
+<dd> Adaptive Gene- and Pathway- Trait Association testing with GWAS Summary Statistics (aSPUs() and aSPUsPath()) </dd>
+</div>
+<div class="tutorial-entry">
+<dt><a href="MTaSPUsSet.html">Vignette for MTaSPUsSet</a> </dt>
+<dd> Adaptive Gene - Multitrait Association testing with GWAS Summary Statistics (MTaSPUsSet() ) </dd>
+</div>
+</dl>
+</section>
+
+<section class="tutorial-section" aria-labelledby="r-funqtl-title">
+<h2 class="tutorial-section-title" id="r-funqtl-title">On R/funqtl</h2>
+<dl class="tutorial-list">
+<div class="tutorial-entry">
+<dt><a href="funqtl.html">Vignette for funqtl</a></dt>
+<dd> This vignette illustrates the use of the funqtl package for QTL mapping with function-valued traits (e.g., growth measured over time). </dd>
+</div>
+<div class="tutorial-entry">
+<dt><a href="fun2mult.html">Vignette for fun2mult</a></dt>
+<dd> This vignette illustrates the use of the funqtl package for QTL mapping with function-valued traits using functional principal component analysis and multi-trait mapping. </dd>
+</div>
+</dl>
+</section>
+
 <hr noshade="noshade" size="3"/>
   
 Part of the data here downloaded from <a href="https://www.broadinstitute.org/collaboration/giant/index.php/GIANT_consortium_data_files">GIANT consortium data files</a> website. Data is from <a href="http://www.ncbi.nlm.nih.gov/pubmed/23754948?dopt=Citation"> Randall JC, Winkler TW, Kutalik Z, Berndt SI, Jackson AU, Monda KL, Kilpeläinen TO, Esko T, Mägi R, Li S, et al.</a> (2013). Sex-stratified genome-wide association studies including 270,000 individuals show sexual dimorphism in genetic loci for anthropometric traits. PLoS Genet 9: e1003500.
